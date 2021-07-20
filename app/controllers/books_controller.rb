@@ -29,6 +29,7 @@ class BooksController < ApplicationController
     {
       title: response["items"].first["volumeInfo"]["title"],
       ISBN: params[:book][:ISBN],
+      category: params[:book][:category],
       cover_picture: response["items"].first["volumeInfo"]["imageLinks"]["thumbnail"]
     }
   end
