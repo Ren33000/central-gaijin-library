@@ -9,9 +9,11 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
+    authorize @book
   end
 
   def create
+    authorize @book
     @book = Book.new(api_input)
     @book.user = current_user
     if @book.save
