@@ -10,9 +10,11 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
+    authorize @book
   end
 
   def create
+    authorize @book
     @book = Book.new(api_input)
     @book.user = current_user
     if @book.save
@@ -32,6 +34,7 @@ class BooksController < ApplicationController
     {
       title: response["items"].first["volumeInfo"]["title"],
       ISBN: params[:book][:ISBN],
+      category: params[:book][:category],
       cover_picture: response["items"].first["volumeInfo"]["imageLinks"]["thumbnail"]
     }
   end
