@@ -67,5 +67,59 @@ Book.create!(
   user: my_user
   )
 
+Book.create!(
+  title: "Dora The Explorer",
+  description: "Dora's range of adventures with her friends and family",
+  category: "Kids",
+  cover_picture: "http://books.google.com/books/content?id=HshOnwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+  ISBN: 9780689866234,
+  user: my_user
+  )
+
+Book.create!(
+  title: "Fifty Shades of Gray",
+  description: "Dorian Gray's adventures of passion",
+  category: "Romance",
+  cover_picture: "http://books.google.com/books/content?id=G_xavgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+  ISBN: 9781612130286,
+  user: my_user
+  )
+
+Book.create!(
+  title: "The Martian",
+  description: "A space mission takes an unexpected turn",
+  category: "Sci-Fi",
+  cover_picture: "http://books.google.com/books/content?id=53pOCgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+  ISBN: 9781785031137,
+  user: my_user
+  )
+
+Book.create!(
+  title: "The Great Gatsby",
+  description: "The classic adventure of The Great Gatsby",
+  category: "Classics",
+  cover_picture: "http://books.google.co.jp/books?id=2xm9oQEACAAJ&dq=isbn:9780333791035&hl=&cd=1&source=gbs_api",
+  ISBN: 9780333791035,
+  user: my_user
+  )
+
+Book.create!(
+  title: "Batman Vol.1",
+  description: "Boom Pow Gapow!",
+  category: "Comics",
+  cover_picture: "http://books.google.com/books/content?id=PR9dwwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+  ISBN: 1401294847,
+  user: my_user
+  )
+
+Book.create!(
+  title: "Hercule Poirot Investigates",
+  description: "First there was the mystery of the film star and the diamond . . . then came the “suicide” that was murder",
+  category: "Mystery and Crime",
+  cover_picture: "http://books.google.com/books/content?id=e9GNwy_vW10C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+  ISBN: 9780062074003,
+  user: my_user
+  )
+
 puts "Smart seeds created"
 
