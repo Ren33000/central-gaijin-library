@@ -1,5 +1,7 @@
 <% @books.each do |book| %>
   <ul>
     <li><%= book.title %> </li>
+    <li> <%= image_tag book.cover_picture %> </li>
+    <li> <%= book.ISBN %> </li>
   </ul>
 <% end %>
