@@ -5,3 +5,67 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+ # t.string"title"
+ #    t.string "category"
+ #    t.string "description"
+ #    t.integer "ISBN"
+ #    t.string "cover_picture"
+ #    t.datetime "created_at", precision: 6, null: false
+ #    t.datetime "updated_at", precision: 6, null: false
+ #    t.bigint "user_id", null: false
+ #    t.index ["user_id"], name: "index_books_on_user_id"
+ #  end
+puts "Cleaning User"
+ User.destroy_all
+
+puts "Creating 5 Smart Seeds"
+
+my_user = User.create!(
+  name: "John Doe",
+  address: "101 Cleverly Lane, Minato-mirai, Yokohama",
+  email: "jdyoko@me.org",
+  password: "livingyokolife"
+  )
+
+puts "Cleaning database"
+Book.destroy_all
+
+Book.create!(
+  title: "Corporate Crime",
+  description: "Corporate Crime, originally published in 1980, is the first and still the only comprehensive study of corporate law violations by our largest corporations. ",
+  category: "Non-fiction",
+  cover_picture: "https://images-na.ssl-images-amazon.com/images/I/51zADBhFW9L._SX331_BO1,204,203,200_.jpg",
+  ISBN: 9781412815253,
+  user: my_user
+  )
+
+Book.create!(
+  title: "Harry Potter and the Philosopher's Stone",
+  description: "Harry Potter spent ten long years living with Mr. and Mrs. Dursley, an aunt and uncle whose outrageous favoritism of their perfectly awful son Dudley leads to some of the most inspired dark comedy since Charlie and the Chocolate Factory.",
+  category: "Fantasy",
+  cover_picture: "https://images-na.ssl-images-amazon.com/images/I/51mtZy7oJVL._SX336_BO1,204,203,200_.jpg",
+  ISBN: 9780590353403,
+  user: my_user
+  )
+
+Book.create!(
+  title: "The Fellowship of the Ring: LOTR Book 1",
+  description: "Immerse yourself in Middle-earth with Tolkien's classic masterpieces behind the films, telling the complete story of Bilbo Baggins and the Hobbits' epic encounters with Gandalf, Gollum, dragons and monsters, in the quest to destroy the One Ring",
+  category: "Fantasy",
+  cover_picture: "https://images-na.ssl-images-amazon.com/images/I/91dR5VlLTVL.jpg",
+  ISBN: 9780007488315,
+  user: my_user
+  )
+
+Book.create!(
+  title: "A Game of Thrones: A Song of Ice and Fire: Book One",
+  description: "Magic, mystery, intrigue, romance, and adventure fill these pages and transport us to a world unlike any we have ever experienced.",
+  category: "Fantasy",
+  cover_picture: "https://www.coverwhiz.com/uploads/tv/Game-of-Thrones-Season-8_v3.jpg",
+  ISBN: 9780553897845,
+  user: my_user
+  )
+
+puts "Smart seeds created"
+

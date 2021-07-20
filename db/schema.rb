@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_17_085148) do
+ActiveRecord::Schema.define(version: 2021_07_19_043240) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,15 +19,19 @@ ActiveRecord::Schema.define(version: 2021_07_17_085148) do
     t.string "status"
     t.date "start_date"
     t.date "end_date"
+    t.bigint "borrower_id"
+    t.bigint "book_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["book_id"], name: "index_bookings_on_book_id"
+    t.index ["borrower_id"], name: "index_bookings_on_borrower_id"
   end
 
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.string "category"
     t.string "description"
-    t.integer "ISBN"
+    t.bigint "ISBN"
     t.string "cover_picture"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -49,5 +53,7 @@ ActiveRecord::Schema.define(version: 2021_07_17_085148) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "books"
+  add_foreign_key "bookings", "users", column: "borrower_id"
   add_foreign_key "books", "users"
 end
