@@ -5,6 +5,8 @@ class BooksController < ApplicationController
 
   def index
     @books = policy_scope(Book).order(created_at: :desc)
+    @books = Book.all
+    @books = Book.new
   end
 
   def new
