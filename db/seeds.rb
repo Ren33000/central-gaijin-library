@@ -81,7 +81,7 @@ Book.create!(
   title: "The Fellowship of the Ring: LOTR Book 1",
   description: "Immerse yourself in Middle-earth with Tolkien's classic masterpieces behind the films, telling the complete story of Bilbo Baggins and the Hobbits' epic encounters with Gandalf, Gollum, dragons and monsters, in the quest to destroy the One Ring",
   category: "Sci-Fi and Fantasy",
-  cover_picture: "https://images-na.ssl-images-amazon.com/images/I/91dR5VlLTVL.jpg",
+  cover_picture: "http://books.google.com/books/content?id=lqHNugAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   ISBN: 9780007488315,
   user: troy
   )
@@ -90,7 +90,7 @@ Book.create!(
   title: "A Game of Thrones: A Song of Ice and Fire: Book One",
   description: "Magic, mystery, intrigue, romance, and adventure fill these pages and transport us to a world unlike any we have ever experienced.",
   category: "Sci-Fi and Fantasy",
-  cover_picture: "https://www.coverwhiz.com/uploads/tv/Game-of-Thrones-Season-8_v3.jpg",
+  cover_picture: "http://books.google.com/books/content?id=5NomkK4EV68C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
   ISBN: 9780553897845,
   user: spencer
   )
@@ -126,7 +126,7 @@ Book.create!(
   title: "The Great Gatsby",
   description: "The classic adventure of The Great Gatsby",
   category: "Classics",
-  cover_picture: "http://books.google.co.jp/books?id=2xm9oQEACAAJ&dq=isbn:9780333791035&hl=&cd=1&source=gbs_api",
+  cover_picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCrRAvteXJgM-3OaMJCmxTEsWhrW5Lv2I-1Yk5mdabukFEMyKR2MJs8b9gm1FdicvNpVk&usqp=CAU",
   ISBN: 9780333791035,
   user: spencer
   )
