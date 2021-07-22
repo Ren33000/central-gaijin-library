@@ -1,4 +1,4 @@
-class BookingPolicy < ApplicationPolicy
+class DashboardPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
@@ -6,14 +6,6 @@ class BookingPolicy < ApplicationPolicy
   end
 
   def profile?
-    true
-  end
-
-  def new?
-    true
-  end
-
-  def create?
     true
   end
 end
