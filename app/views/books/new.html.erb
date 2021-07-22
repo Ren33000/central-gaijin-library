@@ -4,7 +4,7 @@
       <%= simple_form_for(@book) do |f| %>
           <%= f.input :ISBN %>
           <%= f.input :category, :collection => %w[Kids Romance Sci-Fi\ and\ Fantasy Non-Fiction Classics Comics Mystery\ and\ Crime] %>
-          <%= f.button :submit, class: "btn-red-form" %>
+          <%= f.button :submit, class: "btn btn-primary" %>
         <% end %>
     </div>
   </div>
