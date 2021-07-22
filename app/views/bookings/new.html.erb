@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <h4>Booking Request For <strong><%= @book.title %></strong> </h4>
+      <%= simple_form_for([@book, @booking]) do |f| %>
+          <%= f.input :start_date %>
+          <%= f.input :end_date %>
+          <%= f.button :submit, class: "btn btn-primary" %>
+        <% end %>
+    </div>
+  </div>
+</div>

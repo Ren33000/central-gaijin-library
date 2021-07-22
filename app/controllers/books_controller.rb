@@ -14,8 +14,8 @@ class BooksController < ApplicationController
   end
 
   def create
-    authorize @book
     @book = Book.new(api_input)
+    authorize @book
     @book.user = current_user
     if @book.save
       redirect_to books_path
