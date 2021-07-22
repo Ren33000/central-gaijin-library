@@ -63,7 +63,7 @@ Book.create!(
   title: "Corporate Crime",
   description: "Corporate Crime, originally published in 1980, is the first and still the only comprehensive study of corporate law violations by our largest corporations. ",
   category: "Non-fiction",
-  cover_picture: "https://images-na.ssl-images-amazon.com/images/I/51zADBhFW9L._SX331_BO1,204,203,200_.jpg",
+  cover_picture: "http://books.google.com/books/content?id=lvZfAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
   ISBN: 9781412815253,
   user: my_user
   )
@@ -72,7 +72,7 @@ Book.create!(
   title: "Harry Potter and the Philosopher's Stone",
   description: "Harry Potter spent ten long years living with Mr. and Mrs. Dursley, an aunt and uncle whose outrageous favoritism of their perfectly awful son Dudley leads to some of the most inspired dark comedy since Charlie and the Chocolate Factory.",
   category: "Sci-Fi and Fantasy",
-  cover_picture: "https://images-na.ssl-images-amazon.com/images/I/51mtZy7oJVL._SX336_BO1,204,203,200_.jpg",
+  cover_picture: "http://books.google.com/books/content?id=zXgTdQagLGkC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   ISBN: 9780590353403,
   user: mylene
   )

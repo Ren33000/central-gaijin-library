@@ -1,0 +1,13 @@
+<div class="carousel-container">
+  <% @books.each do |book| %>
+    <div class="card-container">
+        <div class="carousel-img">
+            <%= image_tag book.cover_picture %> 
+        </div>
+        <div class="carousel-content">
+            <%= book.title %>
+            <%= book.description %>
+        </div>
+    </div>
+  <% end %>
+</div>
