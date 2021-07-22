@@ -9,6 +9,10 @@ class BookPolicy < ApplicationPolicy
     true
   end
 
+  def category?
+    true
+  end
+
   def new?
     true
   end
