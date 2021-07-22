@@ -13,13 +13,7 @@
   </div>
 </div>
 
-<% @books.each do |book| %>
-  <div class="container">
-     <div class="row">
-        <%= link_to "#{book.category}", category_path(category: book.category), :class => "btn" %>
-    </div>
-  </div>
-<% end %>
+
 
 
 
