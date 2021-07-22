@@ -2,19 +2,7 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
-@import "book-frame";
+@import "book_cover";
 @import "add-book-btn";
 @import "btn-category";
-.carousel-container {
-    // margin-top: 500px;
-    // background-color: gray;
-    width: 500px;
-    display: flex;
-    overflow-x: scroll;
-}
-
-.carousel-image {
-    // min-width: 100px;
-    height: 100px;
-    color: white;
-}
+@import "carousel";
