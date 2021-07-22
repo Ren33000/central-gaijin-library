@@ -1,5 +1,7 @@
 <%= render 'shared/book-frame' %>
 
+<%= render 'shared/btn-category' %>
+
 
 <% if policy(Book).create? %>
   <%= link_to "Add a book", books_new_path %>
