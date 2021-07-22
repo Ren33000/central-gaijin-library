@@ -2,6 +2,7 @@ require 'open-uri'
 
 class BooksController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
+  before_action :find_book, only: :show
 
   def index
     @books = policy_scope(Book).order(created_at: :desc)
@@ -23,6 +24,8 @@ class BooksController < ApplicationController
     end
   end
 
+  def show; end
+
   private
 
   def api_input
@@ -34,6 +37,11 @@ class BooksController < ApplicationController
       category: params[:book][:category],
       cover_picture: response["items"].first["volumeInfo"]["imageLinks"]["thumbnail"]
     }
+  end
+
+  def find_book
+    @book = Book.find(params[:id])
+    authorize @book
   end
 
   # def book_params
