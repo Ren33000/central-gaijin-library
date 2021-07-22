@@ -1,17 +1,12 @@
 .navbar-lewagon {
-    justify-content: space-between;
-    background-image: url("shelf-down.png");
+  justify-content: space-between;
+  background: white;
 }
 
 .navbar-lewagon .navbar-collapse {
-    flex-grow: 0;
+  flex-grow: 0;
 }
 
 .navbar-lewagon .navbar-brand img {
-    width: 40px;
-}
-
-.dropdown-menu {
-    /* metade transparente: alpha = .5 */
-    background-color: rgba(255, 255, 255, 0.5) !important;
+  width: 40px;
 }
