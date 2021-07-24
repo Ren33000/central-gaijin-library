@@ -96,15 +96,6 @@ Book.create!(
   )
 
 Book.create!(
-  title: "Dora The Explorer",
-  description: "Dora's range of adventures with her friends and family",
-  category: "Kids",
-  cover_picture: "http://books.google.com/books/content?id=HshOnwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-  ISBN: 9780689866234,
-  user: dean
-  )
-
-Book.create!(
   title: "Fifty Shades of Gray",
   description: "Dorian Gray's adventures of passion",
   category: "Romance",
@@ -120,15 +111,6 @@ Book.create!(
   cover_picture: "http://books.google.com/books/content?id=53pOCgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   ISBN: 9781785031137,
   user: troy
-  )
-
-Book.create!(
-  title: "The Great Gatsby",
-  description: "The classic adventure of The Great Gatsby",
-  category: "Classics",
-  cover_picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCrRAvteXJgM-3OaMJCmxTEsWhrW5Lv2I-1Yk5mdabukFEMyKR2MJs8b9gm1FdicvNpVk&usqp=CAU",
-  ISBN: 9780333791035,
-  user: spencer
   )
 
 Book.create!(
