@@ -1,6 +1,6 @@
 <div class="form-container">
-  <div class="form-styled">
-      <div class="col-12">
+  <div class="row">
+      <div class="col">
         <%= simple_form_for(@book) do |f| %>
             <%= f.input :ISBN %>
             <%= f.input :category, :collection => %w[Kids Romance Sci-Fi\ and\ Fantasy Non-Fiction Classics Comics Mystery\ and\ Crime] %>
