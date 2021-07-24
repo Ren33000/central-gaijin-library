@@ -1,6 +1,12 @@
+<div class="d-flex justify-content-center" id="title">
+<h2><%= current_user.name %>'s dashboard</h2>
+</div>
+
+
+
 <% @bookings.each do |booking| %>
   <div class="container">
-    <div class="row">
+    <div class="row justify-content-center" id="title">
       <div class=".col">
         <div class="book_card">
             <div class="info_section">
