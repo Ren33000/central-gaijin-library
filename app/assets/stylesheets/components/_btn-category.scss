@@ -3,4 +3,8 @@
     border: none;
     color: text-light;
     box-shadow: 0px -5px 3px 0px rgba(rgb(106, 103, 103), 0.2);
+    & a:link {
+        text-decoration: none;
+        color: text-light;
+    }
 }
