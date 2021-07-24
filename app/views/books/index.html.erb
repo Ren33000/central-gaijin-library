@@ -1,18 +1,19 @@
-
+ <div class="text-center">
+ <h6>Welcome to the <br></h6> 
+ <h4>C<small>entral</small> G<small>aijin</small> L<small>ibrary!</small></h4>
+ </div>
   <%= render 'shared/book-frame' %>
 
   <%= render 'shared/category-carousel' %>
 
-  <div class="row">
-  <div class="col text-center">
-      <div class="btn btn-light justify-content">
-        <% if policy(Book).create? %>
-          <i class="fas fa-book"></i>
-          <%= link_to "Add a book", new_book_path, :class => "btn" %>
-        <% end %>
-      </div>
-    </div>
+<div class="d-flex justify-content-center align-items-center">
+  <div class="btn btn-light justify-content">
+    <% if policy(Book).create? %>
+      <i class="fas fa-book"></i>
+      <%= link_to "Add a book", new_book_path, :class => "btn" %>
+    <% end %>
   </div>
+</div> 
 
 
 
