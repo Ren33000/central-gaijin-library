@@ -3,20 +3,22 @@
     <div class="row">
       <div class=".col-">
         <div class="book_card">
-          <div class="info_section">
-            <div class="book_header">
-              <%= image_tag booking.book.cover_picture, class: 'locandina' %>
-              <h3><%= booking.book.title %></h3>
-              <p class="category"><%= booking.book.category %></p>
+          <i class="fas fa-spinner"></i>
+            <div class="info_section">
+              <div class="book_header">
+                <%= image_tag booking.book.cover_picture, class: 'locandina' %>
+                <h3><%= booking.book.title %></h3>
+                <p class="category"><%= booking.book.category %></p>
+              </div>
+              <div class="book_desc">
+                <p class="text"><%= booking.book.description %></p>
+              </div>
             </div>
-            <div class="book_desc">
-              <p class="text"><%= booking.book.description %></p>
-            </div>
-          </div>
           <!-- <img src="/assets/" class='blur_back' alt="<%= booking.book.category %>"> -->
           <div class="sharp_edges">
             <%= image_tag booking.book.cover_picture, class: 'blur_back' %>
           </div>
+          <br>
         </div>
       </div>
     </div>
