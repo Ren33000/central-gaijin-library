@@ -1,0 +1,102 @@
+$white: #ffff;
+$orange: #ff9e39;
+$red: #DB504A;
+
+.button {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  padding: .75rem 1.8rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .50rem;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.button-primary {
+    color: $white;
+    background: linear-gradient(140deg, #3eb5fb 0%, #2d33a9 100%);
+    transition: 0.2s;
+    &:hover {
+      color: $white;
+      background: linear-gradient(140deg, #58befb 0%, #393fb1 100%);
+      text-decoration: none;
+    }
+    &:active {
+      color: $white;
+      background: linear-gradient(140deg, #3097d4 0%, #212688 100%);
+    }
+}
+
+.button-primary-box {
+  font-size: 3rem;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    color: $white;
+    background: linear-gradient(140deg, #3eb5fb 0%, #2d33a9 100%);
+    height: 64px;
+    width: 64px;
+    border-radius: 24%;
+    transition: 0.2s;
+    &:hover {
+      color: $white;
+      background: linear-gradient(140deg, #58befb 0%, #393fb1 100%);
+      text-decoration: none;
+    }
+    &:active {
+      color: $white;
+      background: linear-gradient(140deg, #3097d4 0%, #212688 100%);
+    }
+}
+
+.button-delete {
+    color: $white;
+    background: $red;
+    transition: 0.3s;
+    &:hover {
+      color: $white;
+      background: #fb5c55;
+      text-decoration: none;
+    }
+    &:active {
+      color: $white;
+      background: #a73d38;
+    }
+}
+
+.button-outline {
+  color: $orange;
+  border: .15rem solid $orange;
+  padding: .6rem 1.8rem;
+  transition: 0.2s;
+    &:hover {
+      color: #ffb364;
+      border: .15rem solid #ffb364;
+      text-decoration: none;
+    }
+    &:active {
+      color: #bd6407;
+      border: .15rem solid #bd6407;
+    }
+}
+
+.button-add {
+  color: $orange;
+  border: .15rem solid $orange;
+  padding: .6rem 1.8rem;
+  transition: 0.2s;
+    &:hover {
+      color: #ffb364;
+      border: .15rem solid #ffb364;
+      text-decoration: none;
+    }
+    &:active {
+      color: #bd6407;
+      border: .15rem solid #bd6407;
+    }
+}
