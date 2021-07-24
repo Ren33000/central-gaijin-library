@@ -11,6 +11,7 @@
         <p class="category"><%= @book.category %></p>
       </div>
       <div class="book_desc">
+        <p class="owner">Owner: <em><%= @book.user.name %></em></p>
         <p class="text"><%= @book.description %></p>
       </div>
     </div>
