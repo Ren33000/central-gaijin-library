@@ -39,21 +39,21 @@ mylene = User.create!(
   )
 
 troy = User.create!(
-  name: "troy",
+  name: "Troy",
   address: "101 troy St",
   email: "troy@me.org",
   password: "troylife"
   )
 
 spencer = User.create!(
-  name: "spencer",
+  name: "Spencer",
   address: "101 spencer St",
   email: "spencer@me.org",
   password: "spencerlife"
   )
 
 dean = User.create!(
-  name: "dean",
+  name: "Dean",
   address: "101 dean St",
   email: "dean@me.org",
   password: "deanlife"
