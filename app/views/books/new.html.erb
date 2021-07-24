@@ -1,11 +1,11 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-6">
-      <%= simple_form_for(@book) do |f| %>
-          <%= f.input :ISBN %>
-          <%= f.input :category, :collection => %w[Kids Romance Sci-Fi\ and\ Fantasy Non-Fiction Classics Comics Mystery\ and\ Crime] %>
-          <%= f.button :submit, class: "btn btn-primary" %>
-        <% end %>
-    </div>
+<div class="form-container">
+  <div class="form-styled">
+      <div class="col-12">
+        <%= simple_form_for(@book) do |f| %>
+            <%= f.input :ISBN %>
+            <%= f.input :category, :collection => %w[Kids Romance Sci-Fi\ and\ Fantasy Non-Fiction Classics Comics Mystery\ and\ Crime] %>
+            <%= f.button :submit, class: "btn btn-primary" %>
+          <% end %>
+      </div>
   </div>
 </div>
