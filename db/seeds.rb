@@ -78,12 +78,30 @@ Book.create!(
   )
 
 Book.create!(
+  title: "Harry Potter and the Philosopher's Stone",
+  description: "Harry Potter spent ten long years living with Mr. and Mrs. Dursley, an aunt and uncle whose outrageous favoritism of their perfectly awful son Dudley leads to some of the most inspired dark comedy since Charlie and the Chocolate Factory.",
+  category: "Kids",
+  cover_picture: "http://books.google.com/books/content?id=zXgTdQagLGkC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+  ISBN: 9780590353403,
+  user: spencer
+  )
+
+Book.create!(
   title: "The Fellowship of the Ring: LOTR Book 1",
   description: "Immerse yourself in Middle-earth with Tolkien's classic masterpieces behind the films, telling the complete story of Bilbo Baggins and the Hobbits' epic encounters with Gandalf, Gollum, dragons and monsters, in the quest to destroy the One Ring",
   category: "Sci-Fi and Fantasy",
   cover_picture: "http://books.google.com/books/content?id=lqHNugAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   ISBN: 9780007488315,
   user: troy
+  )
+
+Book.create!(
+  title: "Harry Potter and the Prisoner of Azkaban",
+  description: "During his third year at Hogwarts School for Witchcraft and Wizardry, Harry Potter must confront the devious and dangerous wizard responsible for his parents' deaths",
+  category: "Kids",
+  cover_picture: "http://books.google.com/books/content?id=uUp5mAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+  ISBN: 9780007488315,
+  user: dean
   )
 
 Book.create!(
