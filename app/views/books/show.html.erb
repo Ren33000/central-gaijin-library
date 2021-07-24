@@ -1,7 +1,32 @@
+<br>
+<br>
+<br>
 <div class="container">
-  <%= image_tag @book.cover_picture, class: 'book_cover' %>
-  <h1> <%= @book.title %></h1>
-  <h2>Category: <%= @book.category %> </h2>
-  <p><%= @book.description %></p>
-
+  <div class="book_card">
+     <%= link_to '+', root_path, class: "button button-primary-box add_book_btn" %>
+    <div class="info_section">
+      <div class="book_header">
+        <%= image_tag @book.cover_picture, class: 'locandina' %>
+        <h3><%= @book.title %></h3>
+        <p class="category"><%= @book.category %></p>
+      </div>
+      <div class="book_desc">
+        <p class="text"><%= @book.description %></p>
+      </div>
+    </div>
+    <!-- <img src="/assets/" class='blur_back' alt="<%= @book.category %>"> -->
+    <div class="sharp_edges">
+      <%= image_tag @book.cover_picture, class: 'blur_back' %>
+    </div>
+    <br>
+  </div>
+  <br>
+  <%= link_to 'Primary', root_path, class: "button button-primary" %>
+  <%= link_to 'Add book', root_path, class: "button button-primary" %>
+  <%= link_to 'Delete book', root_path, class: "button button-delete" %>
+  <%= link_to 'Outline', root_path, class: "button button-outline" %>
+  <%= link_to '+', root_path, class: "button button-primary-box" %>
 </div>
+<br>
+<br>
+<br>

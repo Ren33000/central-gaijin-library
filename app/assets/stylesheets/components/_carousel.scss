@@ -1,18 +1,25 @@
 .card-container {
-    margin-left: 100px;
+    margin-left: 400px;
     margin-top: 50px;
     background-color: white;
 }
 
 .carousel-container {
-    width: 500px;
+    margin-top: 50px;
+    width: 100%;
     display: flex;
     overflow-x: scroll;
 }
 
-.carousel-image {
-    height: 500px;
-    width: 500px;
+.carousel-card {
+    background-color: red;
+}
+
+.carousel-img {
+    margin-top: 50px;
+    object-fit: fill;
+    height: 70%;
+    width: 70%;
     // color: white;
 }
 
