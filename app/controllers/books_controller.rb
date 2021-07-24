@@ -9,7 +9,7 @@ class BooksController < ApplicationController
   end
 
   def category
-    @books = Book.where(category: params[:category] )
+    @books = Book.where(category: params[:category])
     authorize @books
   end
 
