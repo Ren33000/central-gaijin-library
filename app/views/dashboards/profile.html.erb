@@ -1,11 +1,11 @@
 <% @bookings.each do |booking| %>
   <div class="container">
     <div class="row">
-      <div class=".col-">
+      <div class=".col">
         <div class="book_card">
             <div class="info_section">
               <% if booking.status == "pending" %>
-                <i class="fas fa-spinner"></i>
+                <i class="fas fa-spinner mt-2" style="font-size:25px"></i>
               <% end %>
               <div class="book_header">
                 <%= image_tag booking.book.cover_picture, class: 'locandina' %>
