@@ -4,13 +4,13 @@ class Booking < ApplicationRecord
   enum status: { accepted: 0, rejected: 1, pending: 2 }
 
   validates :start_date, :end_date, presence: true
-  validate :validate_other_booking_overlap
+  # validate :validate_other_booking_overlap
 
-  def period
-    start_date..end_date
-  end
+  # def period
+  #   start_date..end_date
+  # end
 
-  private
+  # private
 
   # def validate_other_booking_overlap
   #   other_bookings = Booking.all

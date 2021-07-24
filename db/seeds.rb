@@ -131,5 +131,77 @@ Book.create!(
   user: mylene
   )
 
+Book.create!(
+  title: "Corporate Crime",
+  description: "Corporate Crime, originally published in 1980, is the first and still the only comprehensive study of corporate law violations by our largest corporations. ",
+  category: "Non-fiction",
+  cover_picture: "http://books.google.com/books/content?id=lvZfAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+  ISBN: 9781412815253,
+  user: dean
+  )
+
+Book.create!(
+  title: "Harry Potter and the Philosopher's Stone",
+  description: "Harry Potter spent ten long years living with Mr. and Mrs. Dursley, an aunt and uncle whose outrageous favoritism of their perfectly awful son Dudley leads to some of the most inspired dark comedy since Charlie and the Chocolate Factory.",
+  category: "Sci-Fi and Fantasy",
+  cover_picture: "http://books.google.com/books/content?id=zXgTdQagLGkC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+  ISBN: 9780590353403,
+  user: troy
+  )
+
+Book.create!(
+  title: "The Fellowship of the Ring: LOTR Book 1",
+  description: "Immerse yourself in Middle-earth with Tolkien's classic masterpieces behind the films, telling the complete story of Bilbo Baggins and the Hobbits' epic encounters with Gandalf, Gollum, dragons and monsters, in the quest to destroy the One Ring",
+  category: "Sci-Fi and Fantasy",
+  cover_picture: "http://books.google.com/books/content?id=lqHNugAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+  ISBN: 9780007488315,
+  user: mylene
+  )
+
+Book.create!(
+  title: "A Game of Thrones: A Song of Ice and Fire: Book One",
+  description: "Magic, mystery, intrigue, romance, and adventure fill these pages and transport us to a world unlike any we have ever experienced.",
+  category: "Sci-Fi and Fantasy",
+  cover_picture: "http://books.google.com/books/content?id=5NomkK4EV68C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+  ISBN: 9780553897845,
+  user: dean
+  )
+
+Book.create!(
+  title: "Fifty Shades of Gray",
+  description: "Dorian Gray's adventures of passion",
+  category: "Romance",
+  cover_picture: "http://books.google.com/books/content?id=G_xavgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+  ISBN: 9781612130286,
+  user: troy
+  )
+
+Book.create!(
+  title: "The Martian",
+  description: "A space mission takes an unexpected turn",
+  category: "Sci-Fi and Fantasy",
+  cover_picture: "http://books.google.com/books/content?id=53pOCgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+  ISBN: 9781785031137,
+  user: spencer
+  )
+
+Book.create!(
+  title: "Batman Vol.1",
+  description: "Boom Pow Gapow!",
+  category: "Comics",
+  cover_picture: "http://books.google.com/books/content?id=PR9dwwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+  ISBN: 1401294847,
+  user: my_user
+  )
+
+Book.create!(
+  title: "Hercule Poirot Investigates",
+  description: "First there was the mystery of the film star and the diamond . . . then came the “suicide” that was murder",
+  category: "Mystery and Crime",
+  cover_picture: "http://books.google.com/books/content?id=e9GNwy_vW10C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+  ISBN: 9780062074003,
+  user: troy
+  )
+
 puts "Smart seeds created"
 
