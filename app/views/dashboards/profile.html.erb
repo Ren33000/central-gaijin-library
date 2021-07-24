@@ -4,7 +4,9 @@
       <div class=".col-">
         <div class="book_card">
             <div class="info_section">
-              <!-- i class="fas fa-spinner"></i> -->
+              <% if booking.status == "pending" %>
+                <i class="fas fa-spinner"></i>
+              <% end %>
               <div class="book_header">
                 <%= image_tag booking.book.cover_picture, class: 'locandina' %>
                 <h3><%= booking.book.title %></h3>
