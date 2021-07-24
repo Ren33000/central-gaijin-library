@@ -1,7 +1,8 @@
-<div class="container" id="my-form">
-  <div class="row justify-content-center">
-    <div class="col-6">
-      <h4>Booking Request For <strong><%= @book.title %></strong> </h4>
+<div class="form-container">
+  <div class="row">
+     <div class="col">
+      <h4>Reservation for </h4>
+      <h3><i><%= @book.title %></i></h3>
       <%= simple_form_for([@book, @booking]) do |f| %>
           <%= f.input :start_date %>
           <%= f.input :end_date %>
