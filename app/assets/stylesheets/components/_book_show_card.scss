@@ -56,8 +56,14 @@
     .book_desc{
       padding: 25px;
       height: 50%;
-      .text{
+
+    .text{
         color: #cfd6e1;
+      }
+    .owner{
+        color: #6da6e6;
+        margin-bottom: 8px;
+        font-size: .8rem;
       }
     }
   }
@@ -146,6 +152,10 @@
   .book_desc{
     width: 100%;
     margin-top: -35px;
+
+    .owner {
+      margin-top: -8px;
+    }
   }
 
   .info_section{
