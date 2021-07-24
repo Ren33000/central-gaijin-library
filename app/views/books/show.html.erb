@@ -3,7 +3,7 @@
 <br>
 <div class="container">
   <div class="book_card">
-     <%= link_to '+', root_path, class: "button button-primary-box add_book_btn" %>
+     <%= link_to '+', new_book_booking_path(@book), class: "button button-primary-box add_book_btn" %>
     <div class="info_section">
       <div class="book_header">
         <%= image_tag @book.cover_picture, class: 'locandina' %>
@@ -21,13 +21,4 @@
     </div>
     <br>
   </div>
-  <br>
-  <%= link_to 'Primary', root_path, class: "button button-primary" %>
-  <%= link_to 'Add book', root_path, class: "button button-primary" %>
-  <%= link_to 'Delete book', root_path, class: "button button-delete" %>
-  <%= link_to 'Outline', root_path, class: "button button-outline" %>
-  <%= link_to '+', root_path, class: "button button-primary-box" %>
-</div>
-<br>
-<br>
-<br>
+
