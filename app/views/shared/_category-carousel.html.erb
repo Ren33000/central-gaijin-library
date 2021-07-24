@@ -1,0 +1,19 @@
+
+
+
+
+<% @books_categories.each do |category, books| %>
+   <button type="button" class="btn btn-secondary btn-lg btn-block"><%= link_to "#{category}", category_path(category: "#{category}")%></button>
+  <div class="carousel-container">
+    <% books.each do |book| %>
+      <div class="card-container">
+          <div class="carousel-card">
+              <div class="carousel-img">
+                <%= image_tag book.cover_picture %>
+              </div>
+
+          </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
