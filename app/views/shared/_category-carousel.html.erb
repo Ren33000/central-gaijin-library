@@ -3,7 +3,6 @@
 
 
 <% @books_categories.each do |category, books| %>
-   <button type="button" class="btn btn-secondary btn-lg btn-block"><%= link_to "#{category}", category_path(category: "#{category}")%></button>
   <div class="carousel-container">
     <% books.each do |book| %>
       <div class="container">
@@ -12,5 +11,8 @@
         </div>
       </div>
     <% end %>
+  </div>
+  <div>
+    <button type="button" class="btn btn-secondary btn-lg btn-block"><%= link_to "#{category}", category_path(category: "#{category}")%></button>
   </div>
 <% end %>
