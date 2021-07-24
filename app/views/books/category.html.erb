@@ -1,9 +1,27 @@
+<br>
+<br>
+<br>
 <% @books.each do |book| %>
-  <div class="container">
-    <div class="book-cover">
-      <div class="book">
-        <%= image_tag book.cover_picture %>
-      <div class="book-bg"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-">
+      <div class="book_card">
+         <%= link_to '+', new_book_booking_path(book), class: "button button-primary-box add_book_btn" %>
+        <div class="info_section">
+          <div class="book_header">
+            <%= image_tag book.cover_picture, class: 'locandina' %>
+            <h3><%= book.title %></h3>
+            <p class="category"><%= book.category %></p>
+          </div>
+          <div class="book_desc">
+            <p class="owner">Owner: <em><%= book.user.name %></em></p>
+            <p class="text"><%= book.description %></p>
+          </div>
+        </div>
+        <div class="sharp_edges">
+          <%= image_tag book.cover_picture, class: 'blur_back' %>
+        </div>
+        <br>
       </div>
     </div>
   </div>
