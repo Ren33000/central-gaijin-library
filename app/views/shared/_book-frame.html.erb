@@ -4,8 +4,10 @@
       <%# <div class="book-cover"> %>
         <div class="carousel-img">
           <%# <div class="book"> %>
-            <%= image_tag book.cover_picture %>
-          <%# <div class="book-bg"></div> %>
+
+
+            <%= link_to image_tag("#{book.cover_picture}", :border => 0, :alt => '', :title => ''), book_path(book), :class => 'dock-item' %>
+
           <%# </div> %>
         </div>
       <%# </div> %>
