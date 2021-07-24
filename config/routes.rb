@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'books#index'
+  get '/books/category', to: 'books#category', as: 'category'
   resources :books, only: [:index, :show, :new, :create] do
     resources :bookings, only: [:new, :create]
   end
