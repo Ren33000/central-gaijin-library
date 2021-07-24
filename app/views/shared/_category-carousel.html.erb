@@ -6,13 +6,10 @@
    <button type="button" class="btn btn-secondary btn-lg btn-block"><%= link_to "#{category}", category_path(category: "#{category}")%></button>
   <div class="carousel-container">
     <% books.each do |book| %>
-      <div class="card-container">
-          <div class="carousel-card">
-              <div class="carousel-img">
-                <%= image_tag book.cover_picture %>
-              </div>
-
-          </div>
+      <div class="container">
+        <div class="carousel-img">
+           <%= link_to image_tag("#{book.cover_picture}", :border => 0, :alt => '', :title => ''), book_path(book), :class => 'dock-item' %>
+        </div>
       </div>
     <% end %>
   </div>
