@@ -8,6 +8,11 @@ class BooksController < ApplicationController
     @books = policy_scope(Book).order(created_at: :desc)
   end
 
+  def category
+    @books = Book.where(category: params[:category] )
+    authorize @books
+  end
+
   def new
     @book = Book.new
     authorize @book
