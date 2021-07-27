@@ -28,14 +28,14 @@ my_user = User.create!(
   name: "John Doe",
   address: "101 Cleverly Lane, Minato-mirai, Yokohama",
   email: "jdyoko@me.org",
-  password: "livingyokolife"
+  password: "livingyokolife",
   )
 
 mylene = User.create!(
   name: "Mylene",
   address: "101 Mylene St",
   email: "mylene@me.org",
-  password: "mylenelife"
+  password: "mylenelife",
   )
 
 troy = User.create!(
@@ -65,6 +65,7 @@ Book.create!(
   category: "Non-fiction",
   cover_picture: "http://books.google.com/books/content?id=lvZfAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
   ISBN: 9781412815253,
+  author: "CJ Michaels",
   user: my_user
   )
 
@@ -74,6 +75,7 @@ Book.create!(
   category: "Sci-Fi and Fantasy",
   cover_picture: "http://books.google.com/books/content?id=zXgTdQagLGkC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   ISBN: 9780590353403,
+  author: "J.K. Rowling",
   user: mylene
   )
 
@@ -83,6 +85,7 @@ Book.create!(
   category: "Kids",
   cover_picture: "http://books.google.com/books/content?id=zXgTdQagLGkC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   ISBN: 9780590353403,
+  author: "J.K. Rowling",
   user: spencer
   )
 
@@ -92,6 +95,7 @@ Book.create!(
   category: "Sci-Fi and Fantasy",
   cover_picture: "http://books.google.com/books/content?id=lqHNugAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   ISBN: 9780007488315,
+  author: "J.R.R. Tolkien",
   user: troy
   )
 
@@ -101,6 +105,7 @@ Book.create!(
   category: "Kids",
   cover_picture: "http://books.google.com/books/content?id=uUp5mAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   ISBN: 9780007488315,
+  author: "J.K. Rowling",
   user: dean
   )
 
@@ -110,6 +115,7 @@ Book.create!(
   category: "Sci-Fi and Fantasy",
   cover_picture: "http://books.google.com/books/content?id=5NomkK4EV68C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
   ISBN: 9780553897845,
+  author: "George R. R. Martin",
   user: spencer
   )
 
@@ -119,6 +125,7 @@ Book.create!(
   category: "Romance",
   cover_picture: "http://books.google.com/books/content?id=G_xavgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   ISBN: 9781612130286,
+  author: "E.L. James",
   user: mylene
   )
 
@@ -128,6 +135,7 @@ Book.create!(
   category: "Sci-Fi and Fantasy",
   cover_picture: "http://books.google.com/books/content?id=53pOCgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   ISBN: 9781785031137,
+  author: "Andy Wier",
   user: troy
   )
 
@@ -137,6 +145,7 @@ Book.create!(
   category: "Comics",
   cover_picture: "http://books.google.com/books/content?id=PR9dwwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   ISBN: 1401294847,
+  author: "D.C. Comics",
   user: dean
   )
 
@@ -146,6 +155,7 @@ Book.create!(
   category: "Mystery and Crime",
   cover_picture: "http://books.google.com/books/content?id=e9GNwy_vW10C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   ISBN: 9780062074003,
+  author: "Agatha Cristie",
   user: mylene
   )
 
@@ -155,6 +165,7 @@ Book.create!(
   category: "Non-fiction",
   cover_picture: "http://books.google.com/books/content?id=lvZfAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
   ISBN: 9781412815253,
+  author: "CJ Michaels",
   user: dean
   )
 
@@ -164,6 +175,7 @@ Book.create!(
   category: "Sci-Fi and Fantasy",
   cover_picture: "http://books.google.com/books/content?id=zXgTdQagLGkC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   ISBN: 9780590353403,
+  author: "J.K. Rowling",
   user: troy
   )
 
@@ -173,6 +185,7 @@ Book.create!(
   category: "Sci-Fi and Fantasy",
   cover_picture: "http://books.google.com/books/content?id=lqHNugAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   ISBN: 9780007488315,
+  author: "J.R.R. Tolkien",
   user: mylene
   )
 
@@ -182,6 +195,7 @@ Book.create!(
   category: "Sci-Fi and Fantasy",
   cover_picture: "http://books.google.com/books/content?id=5NomkK4EV68C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
   ISBN: 9780553897845,
+  author: "George R. R. Martin",
   user: dean
   )
 
@@ -191,6 +205,7 @@ Book.create!(
   category: "Romance",
   cover_picture: "http://books.google.com/books/content?id=G_xavgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   ISBN: 9781612130286,
+  author: "E.L. James",
   user: troy
   )
 
@@ -200,6 +215,7 @@ Book.create!(
   category: "Sci-Fi and Fantasy",
   cover_picture: "http://books.google.com/books/content?id=53pOCgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   ISBN: 9781785031137,
+  author: "Andy Wier",
   user: spencer
   )
 
@@ -209,6 +225,7 @@ Book.create!(
   category: "Comics",
   cover_picture: "http://books.google.com/books/content?id=PR9dwwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   ISBN: 1401294847,
+  author: "D.C Comics",
   user: my_user
   )
 
@@ -218,6 +235,7 @@ Book.create!(
   category: "Mystery and Crime",
   cover_picture: "http://books.google.com/books/content?id=e9GNwy_vW10C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   ISBN: 9780062074003,
+  author: "Agatha Cristie",
   user: troy
   )
 
