@@ -1,24 +1,14 @@
- <div class=" text-center" id="title">
-  <h6>Welcome to the <br></h6>
-  <h4>C<small>entral</small> G<small>aijin</small> L<small>ibrary!</small></h4>
- </div>
+<div class="text-center" id="title">
+  <h2><i class="fas fa-book-reader"><i> T<small>he</small> C<small>entral</small> G<small>aijin</small> L<small>ibrary</small></h2>
+</div>
 
- <div>
-   <%= form_tag search_path, method: :get do %>
-     <%= text_field_tag :query,
-       params[:query],
-       class: "form-control",
-       placeholder: "Search by title or location..."
-     %>
-     <%= submit_tag "Search", class: "btn btn-primary" %>
-   <% end %>
- </div>
-  <%= render 'shared/book-frame' %>
 
-  <%= render 'shared/btn-category' %>
-  <%= render 'shared/book-frame' %>
-  
-  <%= render 'shared/category-carousel' %>
+<%= render 'shared/book-frame' %>
+
+<%= render 'shared/btn-category' %>
+<%= render 'shared/book-frame' %>
+
+<%= render 'shared/category-carousel' %>
 
 
 
