@@ -21,12 +21,12 @@ class BooksController < ApplicationController
 
   def search
     if params[:query]
+      @query = params[:query]
       @books = Book.search_by_title_and_author(params[:query])
     else
-      @books = policy_scope(Book).order(title: :asc)
+      @books = Book.all
     end
     authorize @books
-
   end
 
   def new
