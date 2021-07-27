@@ -3,18 +3,24 @@
   <h4>C<small>entral</small> G<small>aijin</small> L<small>ibrary!</small></h4>
  </div>
 
-  <%= render 'shared/book-frame' %>
-  <%= render 'shared/btn-category' %>
-  <%= render 'shared/category-carousel' %>
 
-<%# <div class="d-flex justify-content-center align-items-center"> %>
-  <%# <div class="btn btn-light justify-content"> %>
-    <%# <% if policy(Book).create? %>
-      <%# <i class="fas fa-book"></i> %>
-      <%# <%= link_to "Add a book", new_book_path, :class => "btn" %>
-    <%# <% end %>
-  <%# </div> %>
-<%# </div>  %>
+ <div>
+   <%= form_tag search_path, method: :get do %>
+     <%= text_field_tag :query,
+       params[:query],
+       class: "form-control",
+       placeholder: "Search by title or location..."
+     %>
+     <%= submit_tag "Search", class: "btn btn-primary" %>
+   <% end %>
+ </div>
+
+  <%= render 'shared/book-frame' %>
+
+  <%= render 'shared/btn-category' %>
+  <%= render 'shared/book-frame' %>
+
+  <%= render 'shared/category-carousel' %>
 
 
 <div class="footer">

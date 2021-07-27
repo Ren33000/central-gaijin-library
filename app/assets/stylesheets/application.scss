@@ -10,17 +10,20 @@
 @import "components/index";
 @import "pages/index";
 @import "components/book_cover";
+@import 'flatpickr/dist/flatpickr.css';
+
 
 
 * {
   box-sizing: border-box;
 }
 
-html,
 body {
-  padding: 0px;
-  margin: 0px;
-  color: white;
+    color: white;
+    text-decoration: none;
+    & a:hover {
+        color: text-light;
+    }
 }
 
 .wrapper {
@@ -138,3 +141,7 @@ body {
   right: -17px;
   transform: rotateY(-19deg) translateZ(-10px) scale(0.984);
 }
+
+
+
+

@@ -1,0 +1,32 @@
+<nav role="navigation" class="fixed-top">
+
+    <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+            <%=link_to root_path, class: "dropdown-item" do %>
+                <h5><i class="fas fa-home"> Home</i></h5>
+            <% end  %>
+           <%=link_to dashboards_path, class: "dropdown-item" do %>
+                <h5><i class="fas fa-user"> Me</i></h5>
+            <% end %>
+            <%=link_to dashboards_path, class: "dropdown-item" do %>
+                <h5><i class="fas fa-shopping-cart"> My cart</i></h5>
+            <% end %>
+            <%=link_to new_book_path, class: "dropdown-item" do %>
+                <h5><i class="fas fa-plus-square"> Add book</i></h5>
+            <% end %>
+            
+        </ul>
+    </div>
+         <div class="topnav-right align-item-center">
+        <%= link_to root_path, class: "text-light" do %>
+            <h1><i class="fas fa-book-reader"><i> CGL</i></i></h1>
+        <% end %>
+    </div> 
+    
+</nav>
+   
+ 

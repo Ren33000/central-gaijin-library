@@ -5,6 +5,7 @@ class BooksController < ApplicationController
   before_action :find_book, only: :show
 
   def index
+
     @categories = ["Kids", "Romance", "Sci-Fi and Fantasy", "Non-fiction", "Classics", "Comics", "Mystery and Crime"]
     @books = policy_scope(Book).order(created_at: :desc)
     @books_categories = {}
@@ -16,6 +17,16 @@ class BooksController < ApplicationController
   def category
     @books = Book.where(category: params[:category])
     authorize @books
+  end
+
+  def search
+    if params[:query]
+      @books = Book.search_by_title_and_author(params[:query])
+    else
+      @books = policy_scope(Book).order(title: :asc)
+    end
+    authorize @books
+
   end
 
   def new
@@ -45,7 +56,9 @@ class BooksController < ApplicationController
       title: response["items"].first["volumeInfo"]["title"],
       ISBN: params[:book][:ISBN],
       category: params[:book][:category],
-      cover_picture: response["items"].first["volumeInfo"]["imageLinks"]["thumbnail"]
+      cover_picture: response["items"].first["volumeInfo"]["imageLinks"]["thumbnail"],
+      description: response["items"].first["volumeInfo"]["description"],
+      author: response["items"].first["volumeInfo"]["authors"]
     }
   end
 

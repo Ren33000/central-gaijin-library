@@ -21,7 +21,9 @@
               <div class="book_desc">
                 <p class="owner">Owner: <em><%= booking.book.user.name %></em></p>
                 <p class="text"><%= booking.book.description %></p>
+                <div class="button-delete"></div>
               </div>
+              <%= link_to 'Delete', root_path, class: "button button-delete" %>
             </div>
           <!-- <img src="/assets/" class='blur_back' alt="<%= booking.book.category %>"> -->
           <div class="sharp_edges">
