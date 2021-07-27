@@ -21,4 +21,8 @@ class BookPolicy < ApplicationPolicy
     true
   end
 
+  def search?
+    true
+  end
+
 end
