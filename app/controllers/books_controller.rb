@@ -10,7 +10,7 @@ class BooksController < ApplicationController
     @books = policy_scope(Book).order(created_at: :desc)
     @books_categories = {}
     @categories.each do |category|
-      @books_categories[category] = policy_scope(Book).where(category: category )
+      @books_categories[category] = policy_scope(Book).where(category: category)
     end
   end
 
@@ -20,7 +20,7 @@ class BooksController < ApplicationController
   end
 
   def search
-    if params[:query]
+    if params[:query].present?
       @query = params[:query]
       @books = Book.search_by_title_and_author(params[:query])
     else
