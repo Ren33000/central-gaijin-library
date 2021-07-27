@@ -11,7 +11,9 @@
 @import "pages/index";
 @import "components/book_cover";
 body {
-    // margin-top: 75px;
     color: white;
     text-decoration: none;
+    & a:hover {
+        color: text-light;
+    }
 }
