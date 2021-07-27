@@ -3,32 +3,44 @@
 <br>
 <br>
 <div class="container">
-  <% @books.each do |book| %>
-    <div class="book_card">
-       <%= link_to '+', new_book_booking_path(book), class: "button button-primary-box add_book_btn" %>
-      <div class="info_section">
-        <div class="book_header">
-          <%= image_tag book.cover_picture, class: 'locandina' %>
-          <h3><%= book.title %></h3>
-          <p class="category"><%= book.category %></p>
-        </div>
-        <div class="book_desc">
-          <p class="owner">Owner: <em><%= book.user.name %></em></p>
-          <p class="text"><%= book.description %></p>
-        </div>
-      </div>
-      <!-- <img src="/assets/" class='blur_back' alt="<%= book.category %>"> -->
-      <div class="sharp_edges">
-        <%= image_tag book.cover_picture, class: 'blur_back' %>
-      </div>
+  <div class="row">
+    <div class="col-">
+    <% if @query %>
+      <h1>You searched for <span><strong><%= @query %></strong></span> . <br>We found <span><strong> <%= @books.count == 1 ? "a book" : "#{@books.count} books" %></strong></span> out of <%= Book.count %> from our database.</h1>
+    <% else %>
+      <h1>All <%= Book.count %> books</h1>
+    <% end %>
+
     </div>
-  <% end %>
-      <br>
-      <br>
+  </div>
+
+</div>
+<div class="container">
+  <div class="row">
+    <% @books.each do |book| %>
+      <div class="book_card">
+         <%= link_to '+', new_book_booking_path(book), class: "button button-primary-box add_book_btn" %>
+        <div class="info_section">
+          <div class="book_header">
+            <%= image_tag book.cover_picture, class: 'locandina' %>
+            <h3><%= book.title %></h3>
+            <p class="category"><%= book.category %></p>
+          </div>
+          <div class="book_desc">
+            <p class="owner">Owner: <em><%= book.user.name %></em></p>
+            <p class="text"><%= book.description %></p>
+          </div>
+        </div>
+        <!-- <img src="/assets/" class='blur_back' alt="<%= book.category %>"> -->
+        <div class="sharp_edges">
+          <%= image_tag book.cover_picture, class: 'blur_back' %>
+        </div>
+      </div>
+    <% end %>
       <div class="d-flex justify-content-center align-items-center">
         <%= link_to "Back", root_path, class:'button button-outline justify-content-center'%>
       </div>
-      <br>
-      <br>
-      <br><br><br><br><br><br><br><br><br><br>
+  </div>
+</div>
+
 
