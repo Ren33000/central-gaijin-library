@@ -1,0 +1,34 @@
+
+<br>
+<br>
+<br>
+<div class="container">
+  <% @books.each do |book| %>
+    <div class="book_card">
+       <%= link_to '+', new_book_booking_path(book), class: "button button-primary-box add_book_btn" %>
+      <div class="info_section">
+        <div class="book_header">
+          <%= image_tag book.cover_picture, class: 'locandina' %>
+          <h3><%= book.title %></h3>
+          <p class="category"><%= book.category %></p>
+        </div>
+        <div class="book_desc">
+          <p class="owner">Owner: <em><%= book.user.name %></em></p>
+          <p class="text"><%= book.description %></p>
+        </div>
+      </div>
+      <!-- <img src="/assets/" class='blur_back' alt="<%= book.category %>"> -->
+      <div class="sharp_edges">
+        <%= image_tag book.cover_picture, class: 'blur_back' %>
+      </div>
+    </div>
+  <% end %>
+      <br>
+      <br>
+      <div class="d-flex justify-content-center align-items-center">
+        <%= link_to "Back", root_path, class:'button button-outline justify-content-center'%>
+      </div>
+      <br>
+      <br>
+      <br><br><br><br><br><br><br><br><br><br>
+

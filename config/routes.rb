@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'books#index'
+  get '/books/search', to: 'books#search', as: 'search'
   get '/books/category', to: 'books#category', as: 'category'
-  resources :books, only: [:index, :show, :new, :create] do
+  resources :books, only: [:index, :show, :new, :create,] do
     resources :bookings, only: [:new, :create]
   end
   get '/dashboards', to: 'dashboards#profile'
