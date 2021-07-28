@@ -15,4 +15,8 @@
     object-fit: fill;
     height: 70%;
     width: 70%;
+    transition: opacity 300ms;
+    &:hover {
+      opacity: 0.5;
+    }
 }

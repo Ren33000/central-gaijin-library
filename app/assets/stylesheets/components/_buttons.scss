@@ -12,7 +12,6 @@ $red: #DB504A;
   font-size: 1rem;
   line-height: 1.5;
   border-radius: .50rem;
-  margin-left: 20px;
   text-decoration: none;
 }
 
@@ -104,3 +103,12 @@ a {
       border: .15rem solid #bd6407;
     }
 }
+
+.button-cancel {
+  color: #ffc65a8c;
+  transition: color 300ms;
+  &:hover {
+    color: #ffc65a;
+  }
+}
+
