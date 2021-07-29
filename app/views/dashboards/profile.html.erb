@@ -28,7 +28,7 @@
                   <% else %>
                     <i class="far fa-times-circle mt-2" style="font-size: 25px"></i>
                   <% end %>
-                  <%= link_to "", root_path, { class: 'fas fa-exclamation-triangle mt-2 button-cancel', style: '25px', title: '', data: { toggle: 'tooltip', placement: 'top', title: 'Cancel request' } }%>
+                  <%= link_to "", booking_path(booking), { class: 'fas fa-exclamation-triangle mt-2 button-cancel', style: '25px', title: '', data: { toggle: 'tooltip', placement: 'top', title: 'Cancel request' }, method: :delete }%>
                 </div>
                 <div class="book_header">
                   <%= image_tag booking.book.cover_picture, class: 'locandina' %>
@@ -43,13 +43,14 @@
               <div class="sharp_edges">
                 <%= image_tag booking.book.cover_picture, class: 'blur_back' %>
               </div>
-              <br>
+              <!-- <br> -->
             </div>
           </div>
         </div>
       </div>
     <% end %>
   </div>
+</div>
   <div class="tab-pane fade py-3" id="requests" role="tabpanel" aria-labelledby="profile-tab">
     <% @requests.each do |booking| %>
       <div class="container">
@@ -102,4 +103,3 @@
   <div class="tab-pane fade py-3" id="converstions" role="tabpanel" aria-labelledby="converstion-tab">
     This is the content for the Conversations tab. Notice in the tab HTML there is a href="#converstations". This is pointing to the id of this div.
   </div>
-</div>
