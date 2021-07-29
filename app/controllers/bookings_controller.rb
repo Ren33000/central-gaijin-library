@@ -22,7 +22,8 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     authorize @booking
     if @booking.update(booking_params)
-      redirect_to dashboards_path
+      flash[:notice] = "Booking is #{@booking.status}"
+      redirect_to dashboards_path(tab: "requests")
     else
       render :update
     end
