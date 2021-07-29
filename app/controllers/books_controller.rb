@@ -45,7 +45,10 @@ class BooksController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @booking = Booking.new
+    authorize @booking
+  end
 
   private
 
