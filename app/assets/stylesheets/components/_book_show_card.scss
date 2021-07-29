@@ -25,6 +25,7 @@
         background-blend-mode: multiply;
         z-index: 2;
         border-radius: 10px;
+        // margin-bottom: 2rem;
         .book_header {
             position: relative;
             padding: 25px;
@@ -43,6 +44,14 @@
                 padding: 5px;
                 border-radius: 5px;
                 border: 1px solid rgba(255, 255, 255, 0.13);
+                a {
+                  font-size: 1em;
+                  color: #6da6e6;
+                  &:hover {
+                    text-decoration: none;
+                    color: #6da6e6;
+                  }
+                }
             }
             .locandina {
                 position: relative;
@@ -57,6 +66,7 @@
             height: 50%;
             .text {
                 color: #cfd6e1;
+                // min-width: 66ch;
             }
             .owner {
                 color: #6da6e6;
@@ -88,12 +98,15 @@
     }
 }
 
-@media screen and (min-width: 915px) {
+@media screen and (min-width: 812px) {
     .book_header {
         width: 60%;
     }
     .book_desc {
         width: 50%;
+      .text {
+         min-width: 66ch;
+      }
     }
     .info_section {
         background: linear-gradient(to right, #0e151d 55%, transparent 100%);
@@ -104,11 +117,11 @@
     }
 }
 
-@media screen and (max-width: 915px) {
+@media screen and (max-width: 812px) {
     .book_card {
-        width: 95%;
+        width: 33ch;
         margin: 0px auto;
-        min-height: 350px;
+        // min-height: 350px;
         height: auto;
     }
     h3 {
@@ -118,7 +131,7 @@
     .add_book_btn {
         position: absolute;
         top: 9px !important;
-        left: -8px !important;
+        left: 9px !important;
         z-index: 3;
     }
     .category {
@@ -141,11 +154,18 @@
         width: 100%;
         margin-top: -35px;
         .owner {
-            margin-top: -8px;
+          margin-top: -16px;
+        }
+        .text {
+          // min-width: 28ch !important;
         }
     }
     .info_section {
         background: linear-gradient(to top, #0e151d 65%, transparent 100%);
         display: inline-grid;
+    }
+
+    .kill-profile-margin {
+      margin-bottom: -3em;
     }
 }

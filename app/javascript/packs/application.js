@@ -35,3 +35,7 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   unavailableBookingDates();
 });
+
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
