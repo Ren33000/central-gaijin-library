@@ -4,22 +4,20 @@
     <title>CentralGaijinLibrary</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
-
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
     <div class="background" style="background-image: url(<%=asset_path("shelf-up.png")%>)">
       <%= render 'shared/navbar2' %>
+      <%= render 'shared/flashes' %>
       <div class="background-body">
         <%= yield %>
         <%= render 'shared/footer' %>
       </div>
+
     </div>
   </body>
 </html>

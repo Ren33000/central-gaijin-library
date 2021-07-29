@@ -6,58 +6,58 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
- # t.string"title"
- #    t.string "category"
- #    t.string "description"
- #    t.integer "ISBN"
- #    t.string "cover_picture"
- #    t.datetime "created_at", precision: 6, null: false
- #    t.datetime "updated_at", precision: 6, null: false
- #    t.bigint "user_id", null: false
- #    t.index ["user_id"], name: "index_books_on_user_id"
- #  end
+# t.string"title"
+#    t.string "category"
+#    t.string "description"
+#    t.integer "ISBN"
+#    t.string "cover_picture"
+#    t.datetime "created_at", precision: 6, null: false
+#    t.datetime "updated_at", precision: 6, null: false
+#    t.bigint "user_id", null: false
+#    t.index ["user_id"], name: "index_books_on_user_id"
+#  end
 
 puts "Cleaning Database"
- Booking.destroy_all
- Book.destroy_all
- User.destroy_all
+Booking.destroy_all
+Book.destroy_all
+User.destroy_all
 
 puts "Creating Smart Seeds"
 
 my_user = User.create!(
   name: "John Doe",
-  address: "101 Cleverly Lane, Minato-mirai, Yokohama",
+  address: "Yokohama",
   email: "jdyoko@me.org",
   password: "livingyokolife",
-  )
+)
 
 mylene = User.create!(
   name: "Mylene",
-  address: "101 Mylene St",
+  address: "72-34, Horikawa-cho, Saiwai-ku, Kawasaki, Kanagawa 212-8585",
   email: "mylene@me.org",
   password: "mylenelife",
-  )
+)
 
 troy = User.create!(
   name: "Troy",
-  address: "101 troy St",
+  address: "4-23-5 Koenjiminami, Suginami, Tokyo, 166-0003",
   email: "troy@me.org",
   password: "troylife"
-  )
+)
 
 spencer = User.create!(
   name: "Spencer",
-  address: "101 spencer St",
+  address: "3 Chome-11-1 Tsunashimanishi, Kohoku Ward, Yokohama, Kanagawa 223-0053",
   email: "spencer@me.org",
   password: "spencerlife"
-  )
+)
 
 dean = User.create!(
   name: "Dean",
-  address: "101 dean St",
+  address: "1-1 Yoyogikamizonocho, Shibuya City, Tokyo 151-8557",
   email: "dean@me.org",
   password: "deanlife"
-  )
+)
 
 Book.create!(
   title: "Corporate Crime",
@@ -67,7 +67,7 @@ Book.create!(
   ISBN: 9781412815253,
   author: "CJ Michaels",
   user: my_user
-  )
+)
 
 Book.create!(
   title: "Harry Potter and the Philosopher's Stone",
@@ -77,7 +77,7 @@ Book.create!(
   ISBN: 9780590353403,
   author: "J.K. Rowling",
   user: mylene
-  )
+)
 
 Book.create!(
   title: "Harry Potter and the Philosopher's Stone",
@@ -87,7 +87,7 @@ Book.create!(
   ISBN: 9780590353403,
   author: "J.K. Rowling",
   user: spencer
-  )
+)
 
 Book.create!(
   title: "The Fellowship of the Ring: LOTR Book 1",
@@ -97,7 +97,7 @@ Book.create!(
   ISBN: 9780007488315,
   author: "J.R.R. Tolkien",
   user: troy
-  )
+)
 
 Book.create!(
   title: "Harry Potter and the Prisoner of Azkaban",
@@ -107,7 +107,7 @@ Book.create!(
   ISBN: 9780007488315,
   author: "J.K. Rowling",
   user: dean
-  )
+)
 
 Book.create!(
   title: "A Game of Thrones: A Song of Ice and Fire: Book One",
@@ -117,7 +117,7 @@ Book.create!(
   ISBN: 9780553897845,
   author: "George R. R. Martin",
   user: spencer
-  )
+)
 
 Book.create!(
   title: "Fifty Shades of Gray",
@@ -127,7 +127,7 @@ Book.create!(
   ISBN: 9781612130286,
   author: "E.L. James",
   user: mylene
-  )
+)
 
 Book.create!(
   title: "The Martian",
@@ -137,7 +137,7 @@ Book.create!(
   ISBN: 9781785031137,
   author: "Andy Wier",
   user: troy
-  )
+)
 
 Book.create!(
   title: "Batman Vol.1",
@@ -147,7 +147,7 @@ Book.create!(
   ISBN: 1401294847,
   author: "D.C. Comics",
   user: dean
-  )
+)
 
 Book.create!(
   title: "Hercule Poirot Investigates",
@@ -157,7 +157,7 @@ Book.create!(
   ISBN: 9780062074003,
   author: "Agatha Cristie",
   user: mylene
-  )
+)
 
 Book.create!(
   title: "Corporate Crime",
@@ -167,7 +167,7 @@ Book.create!(
   ISBN: 9781412815253,
   author: "CJ Michaels",
   user: dean
-  )
+)
 
 Book.create!(
   title: "Harry Potter and the Philosopher's Stone",
@@ -177,7 +177,7 @@ Book.create!(
   ISBN: 9780590353403,
   author: "J.K. Rowling",
   user: troy
-  )
+)
 
 Book.create!(
   title: "The Fellowship of the Ring: LOTR Book 1",
@@ -187,7 +187,7 @@ Book.create!(
   ISBN: 9780007488315,
   author: "J.R.R. Tolkien",
   user: mylene
-  )
+)
 
 Book.create!(
   title: "A Game of Thrones: A Song of Ice and Fire: Book One",
@@ -197,7 +197,7 @@ Book.create!(
   ISBN: 9780553897845,
   author: "George R. R. Martin",
   user: dean
-  )
+)
 
 Book.create!(
   title: "Fifty Shades of Gray",
@@ -207,7 +207,7 @@ Book.create!(
   ISBN: 9781612130286,
   author: "E.L. James",
   user: troy
-  )
+)
 
 Book.create!(
   title: "The Martian",
@@ -217,7 +217,7 @@ Book.create!(
   ISBN: 9781785031137,
   author: "Andy Wier",
   user: spencer
-  )
+)
 
 Book.create!(
   title: "Batman Vol.1",
@@ -227,7 +227,7 @@ Book.create!(
   ISBN: 1401294847,
   author: "D.C Comics",
   user: my_user
-  )
+)
 
 Book.create!(
   title: "Hercule Poirot Investigates",
@@ -237,7 +237,6 @@ Book.create!(
   ISBN: 9780062074003,
   author: "Agatha Cristie",
   user: troy
-  )
+)
 
 puts "Smart seeds created"
-

@@ -29,11 +29,17 @@ import flatpickr from "flatpickr";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { unavailableBookingDates } from '../plugins/init_flatpickr';
+import { initSweetalert } from '../plugins/init_sweetalert';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   unavailableBookingDates();
+  initSweetalert('#sweet-alert-demo', {
+  title: "You accepted the booking request of (name)",
+  text: "From date to date",
+  icon: "success"
+});
 });
 
 $(document).ready(function(){

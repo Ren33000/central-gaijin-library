@@ -20,14 +20,29 @@
       <%= image_tag @book.cover_picture, class: 'blur_back' %>
     </div>
   </div>
-  <br>
+<div class="container" id="title">
+  <div class="row justify-content-center">
+    <div class="col">
+      <h3>Booking Request For</h3>
+      <h4><strong><%= @book.title %></strong> </h4>
+      <div id='book-booking-dates' data-unavailable="<%= @book.unavailable_dates.to_json %>">
+          <% if current_user.id != @book.user_id  %>
+             <%= simple_form_for([@book, @booking]) do |f| %>
+                 <%= f.input :start_date, as: :string, type: :text %>
+                 <%= f.input :end_date, as: :string, type: :text %>
+                 <%= f.submit "Book", class: "btn btn-primary" %>
+              <% end %>
+          <% end %>
+       </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
   <div class="d-flex justify-content-center align-items-center mt-18 mb-12">
       <%= link_to "Back", root_path, class:'button button-outline justify-content-center'%>
   </div>
-<br>
-<br>
-<br>
-<br>
+</div>
 <br>
 <br>
 <br>

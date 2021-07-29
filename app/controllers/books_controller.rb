@@ -38,20 +38,25 @@ class BooksController < ApplicationController
     @book = Book.new(api_input)
     authorize @book
     @book.user = current_user
-    if @book.save
+    if @book.save && @book.present?
       redirect_to books_path
     else
       render :new
     end
   end
 
-  def show; end
+  def show
+    @booking = Booking.new
+    authorize @booking
+  end
 
   private
 
   def api_input
     url = "https://www.googleapis.com/books/v1/volumes?q=isbn:#{params[:book][:ISBN]}"
     response = JSON.parse(URI.open(url).read)
+    return {ISBN: params[:book][:ISBN],
+            category: params[:book][:category]} if response["items"].first["volumeInfo"]["imageLinks"].nil?
     {
       title: response["items"].first["volumeInfo"]["title"],
       ISBN: params[:book][:ISBN],
