@@ -1,8 +1,8 @@
-<button type="button" class="btn btn-secondary btn-lg btn-block"><%= link_to "Selection of the month", "" %></button>
+<button type="button" class="btn btn-secondary btn-lg btn-block mb-3"><%= link_to "Selection of the month", "" %></button>
 
-<div class="carousel-container">
+<div class="carousel-container" >
   <% @books.each do |book| %>
-    <div class="wrapper">
+    <div class="wrapper mb-3">
       <div class="book">
         <div class="inner-book">
           <div class="img" style="padding-top: calc(1.07 * 100%)">
@@ -29,7 +29,7 @@
   <div class="carousel-container">
     <% books.each do |book| %>
       <div class="container">
-           <div class="wrapper">
+           <div class="wrapper mt-3 mb-3">
               <div class="book">
                 <div class="inner-book">
                   <div class="img" style="padding-top: calc(1.07 * 100%)">
