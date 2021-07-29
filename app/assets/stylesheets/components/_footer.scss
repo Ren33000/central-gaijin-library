@@ -1,0 +1,39 @@
+.footer {
+    // background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0px 50px;
+    color: rgba(218, 211, 211, 0.74);
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+}
+
+.footer-links a {
+    color: rgba(255, 248, 248, 0.883);
+    opacity: 0.15;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 0px 10px;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+.footer .fa-heart {
+    color: #d23333;
+}
+
+@media (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+    }
+    .footer-links {
+        flex-direction: column;
+    }
+}
