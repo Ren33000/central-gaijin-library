@@ -14,7 +14,9 @@ a {
 }
 
 a:hover {
-    opacity: 0.5;
+  // commented this out because it was making all buttons/links everywhere transparent on hover
+  // Moved it to carousel.scss --Troy
+    // opacity: 0.5;
 }
 
 ul {

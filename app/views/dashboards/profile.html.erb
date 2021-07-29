@@ -10,9 +10,12 @@
       <div class=".col">
         <div class="book_card">
             <div class="info_section">
-              <% if booking.status == "pending" %>
-                <i class="fas fa-spinner mt-2" style="font-size:25px"></i>
-              <% end %>
+              <div class="d-flex kill-profile-margin">
+                <% if booking.status == "pending" %>
+                  <i class="fas fa-spinner mt-2 mx-2" data-toggle="tooltip" data-placement="top" title="Pending" style="font-size:25px"></i>
+                <% end %>
+                <%= link_to "", root_path, { class: 'fas fa-exclamation-triangle mt-2 button-cancel', style: '25px', title: '', data: { toggle: 'tooltip', placement: 'top', title: 'Cancel request' } }%>
+              </div>
               <div class="book_header">
                 <%= image_tag booking.book.cover_picture, class: 'locandina' %>
                 <h3><%= booking.book.title %></h3>
@@ -23,7 +26,6 @@
                 <p class="text"><%= booking.book.description %></p>
                 <div class="button-delete"></div>
               </div>
-              <%= link_to 'Delete', root_path, class: "button button-delete" %>
             </div>
           <!-- <img src="/assets/" class='blur_back' alt="<%= booking.book.category %>"> -->
           <div class="sharp_edges">
