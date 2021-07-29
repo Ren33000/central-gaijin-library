@@ -11,9 +11,9 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.book = @book
-    @booking.pending!
     authorize @booking
     if @booking.save
+      @booking.pending!
       redirect_to dashboards_path
     else
       render :new

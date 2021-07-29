@@ -70,15 +70,7 @@
                     <% end %>
                   <% else %>
                     <p class='booking-tag'><%= booking.status %></p>
-                    <div>
-                      <p><%= booking.user.name %></p>
-                    </div>
-                    <p><%= booking.start_date %></p>
-                    -
-                    <p><%= booking.end_date %></p>
-                    <div>
-                    <% end %>
-                  </div>
+                  <% end %>
                 </div>
                 <div class="book_header">
                   <%= image_tag booking.book.cover_picture, class: 'locandina' %>
@@ -93,8 +85,8 @@
               <div class="sharp_edges">
                 <%= image_tag booking.book.cover_picture, class: 'blur_back' %>
               </div>
-              <br>
             </div>
+            <br>
           </div>
         </div>
       </div>
@@ -103,3 +95,4 @@
   <div class="tab-pane fade py-3" id="converstions" role="tabpanel" aria-labelledby="converstion-tab">
     This is the content for the Conversations tab. Notice in the tab HTML there is a href="#converstations". This is pointing to the id of this div.
   </div>
+
