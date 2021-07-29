@@ -1,7 +1,6 @@
 <div class="d-flex justify-content-center" id="title">
-<h2><%= current_user.name %>'s dashboard</h2>
+  <h2><%= current_user.name %>'s dashboard</h2>
 </div>
-
 <ul class="nav tabs-underlined center" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
     <a class="active tab-underlined" id="home-tab" data-toggle="tab" href="#bookings" role="tab" aria-controls="home" aria-selected="true">Bookings</a>
@@ -20,31 +19,28 @@
         <div class="row justify-content-center" id="title">
           <div class=".col">
             <div class="book_card">
-                <div class="info_section">
-                  <% if booking.status == "pending" %>
-                    <i class="fas fa-spinner mt-2" style="font-size:25px"></i>
-                  <% elsif booking.status == "accepted" %>
-                    <i class="far fa-check-circle mt-2" style="font-size:25px"></i>
-                  <% else %>
-                    <i class="far fa-check-circle mt-2" style="font-size: 25px"></i>
-                  <% end %>
-                  <div class="book_header">
-                    <%= image_tag booking.book.cover_picture, class: 'locandina' %>
-                    <h3><%= booking.book.title %></h3>
-                    <p class="category"><%= booking.book.category %></p>
-                  </div>
-                  <div class="book_desc">
-                    <p class="owner">Owner: <em><%= booking.book.user.name %></em></p>
-                    <p class="text"><%= booking.book.description %></p>
-                    <div class="button-delete"></div>
-                  </div>
-                  <%= link_to 'Delete', root_path, class: "button button-delete" %>
+              <div class="info_section">
+                <% if booking.pending? %>
+                  <i class="fas fa-spinner mt-2" style="font-size:25px"></i>
+                <% elsif booking.accepted? %>
+                  <i class="far fa-check-circle mt-2" style="font-size:25px"></i>
+                <% else %>
+                  <i class="far fa-check-circle mt-2" style="font-size: 25px"></i>
+                <% end %>
+                <div class="book_header">
+                  <%= image_tag booking.book.cover_picture, class: 'locandina' %>
+                  <h3><%= booking.book.title %></h3>
+                  <p class="category"><%= booking.book.category %></p>
                 </div>
-
-              <div class="sharp_edges">
-                <%= image_tag booking.book.cover_picture, class: 'blur_back' %>
+                <div class="book_desc">
+                  <p class="owner">Owner: <em><%= booking.book.user.name %></em></p>
+                  <p class="text"><%= booking.book.description %></p>
+                </div>
+                <div class="sharp_edges">
+                  <%= image_tag booking.book.cover_picture, class: 'blur_back' %>
+                </div>
+                <br>
               </div>
-              <br>
             </div>
           </div>
         </div>
@@ -57,30 +53,35 @@
         <div class="row justify-content-center" id="title">
           <div class=".col">
             <div class="book_card">
-                <div class="info_section">
-                  <% if booking.status == "pending" %>
-                    <i class="fas fa-spinner mt-2" style="font-size:25px"></i>
-                  <% elsif booking.status == "accepted" %>
-                    <i class="far fa-check-circle mt-2" style="font-size:25px"></i>
+              <div class="info_section">
+                <div class="booking-actions">
+                  <% if booking.pending? %>
+                    <%= simple_form_for booking do |f| %>
+                      <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
+                      <%= f.submit 'Accept', class: 'btn btn-info' %>
+                    <% end %>
+                    <%= simple_form_for booking do |f| %>
+                      <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
+                      <%= f.submit 'Reject', class: 'btn btn-info' %>
+                    <% end %>
                   <% else %>
-                    <i class="far fa-check-circle mt-2" style="font-size: 25px"></i>
+                    <p class='booking-tag'><%= booking.status %></p>
                   <% end %>
-                  <div class="book_header">
-                    <%= image_tag booking.book.cover_picture, class: 'locandina' %>
-                    <h3><%= booking.book.title %></h3>
-                    <p class="category"><%= booking.book.category %></p>
-                  </div>
-                  <div class="book_desc">
-                    <p class="owner">Owner: <em><%= booking.book.user.name %></em></p>
-                    <p class="text"><%= booking.book.description %></p>
-                    <div class="button-delete"></div>
-                  </div>
-
-
-              <div class="sharp_edges">
-                <%= image_tag booking.book.cover_picture, class: 'blur_back' %>
+                </div>
+                <div class="book_header">
+                  <%= image_tag booking.book.cover_picture, class: 'locandina' %>
+                  <h3><%= booking.book.title %></h3>
+                  <p class="category"><%= booking.book.category %></p>
+                </div>
+                <div class="book_desc">
+                  <p class="owner">Owner: <em><%= booking.book.user.name %></em></p>
+                  <p class="text"><%= booking.book.description %></p>
+                </div>
+                <div class="sharp_edges">
+                  <%= image_tag booking.book.cover_picture, class: 'blur_back' %>
+                </div>
+                <br>
               </div>
-              <br>
             </div>
           </div>
         </div>
@@ -91,5 +92,3 @@
     This is the content for the Conversations tab. Notice in the tab HTML there is a href="#converstations". This is pointing to the id of this div.
   </div>
 </div>
-
-
