@@ -5,12 +5,18 @@ class BooksController < ApplicationController
   before_action :find_book, only: :show
 
   def index
-
+    @users = User.all
     @categories = ["Kids", "Romance", "Sci-Fi and Fantasy", "Non-fiction", "Classics", "Comics", "Mystery and Crime"]
     @books = policy_scope(Book).order(created_at: :desc)
     @books_categories = {}
     @categories.each do |category|
       @books_categories[category] = policy_scope(Book).where(category: category)
+    end
+    @markers = @users.geocoded.map do |user|
+      {
+        lat: user.latitude,
+        lng: user.longitude
+      }
     end
   end
 
