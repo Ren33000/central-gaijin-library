@@ -12,12 +12,14 @@
   </head>
 
   <body>
-  <div class="background" style="background-image: url(<%= asset_path('shelf-up.png') %>);">
-    <%= render 'shared/navbar2' %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
-    <%= render 'shared/footer' %>
-  </div>
+    <div class="background" style="background-image: url(<%=asset_path("shelf-up.png")%>)">
+      <%= render 'shared/navbar2' %>
+      <div class="background-body">
+        <%= yield %>
+        <%= render 'shared/footer' %>
+      </div>
+    </div>
   </body>
 </html>

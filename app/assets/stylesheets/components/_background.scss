@@ -1,0 +1,15 @@
+.background {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.background-body {
+    flex-grow: 1;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: unset;
+}
