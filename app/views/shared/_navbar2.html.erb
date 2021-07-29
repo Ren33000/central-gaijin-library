@@ -17,16 +17,24 @@
             <% end %>
             <%=link_to new_book_path, class: "dropdown-item" do %>
                 <h5><i class="fas fa-plus-square"> Add book</i></h5>
-            <% end %>
-            
+            <% end %>          
         </ul>
     </div>
-         <div class="topnav-right align-item-center">
-        <%= link_to root_path, class: "text-light" do %>
-            <h1><i class="fas fa-book-reader"><i> CGL</i></i></h1>
-        <% end %>
-    </div> 
-    
+   
+    <%# <div class="search-bar topnav-right form-inline"> %>
+        <%= form_tag search_path, method: :get, class: "form-inline" do %>
+            <div class="form-group mb-0">
+                <%= text_field_tag :query, 
+                params[:query],
+                class: "form-control",
+                placeholder: "Title, author or location..." 
+                %>
+            </div>
+            <%= button_tag "", class: "btn btn-outline-info" do %> 
+            <i class="fas fa-search"></i>
+            <% end %>
+         <% end %>
+    <%# </div>   %>
 </nav>
    
  
