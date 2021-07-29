@@ -15,8 +15,9 @@
 }
 
 body {
-    color: white;
+    color: rgba(255, 248, 248, 0.883);
     text-decoration: none;
+    height: 100vh;
     & a:hover {
         color: text-light;
     }
