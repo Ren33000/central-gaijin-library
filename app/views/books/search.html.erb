@@ -7,6 +7,8 @@
     <div class="col-">
     <% if @query %>
       <h1>You searched for <span><strong><%= @query %></strong></span> . <br>We found <span><strong> <%= @books.count == 1 ? "a book" : "#{@books.count} books" %></strong></span> out of <%= Book.count %> from our database.</h1>
+</div>
+      
     <% else %>
       <h1>All <%= Book.count %> books</h1>
     <% end %>
