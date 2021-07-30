@@ -3,13 +3,13 @@
 </div>
 <ul class="nav tabs-underlined center" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
-    <a class="<%= 'active' unless params[:tab] == "requests" %> tab-underlined" id="home-tab" data-toggle="tab" href="#bookings" role="tab" aria-controls="home" aria-selected="true">Bookings</a>
+    <a class="<%= 'active' unless params[:tab] == "requests" && params[:tab] == "converstions" %> tab-underlined" id="home-tab" data-toggle="tab" href="#bookings" role="tab" aria-controls="home" aria-selected="true">Bookings</a>
   </li>
   <li class="nav-item" role="presentation">
     <a class="<%= 'active' if params[:tab] == "requests" %> tab-underlined" id="profile-tab" data-toggle="tab" href="#requests" role="tab" aria-controls="profile" aria-selected="false">Requests</a>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="tab-underlined" id="converstion-tab" data-toggle="tab" href="#converstions" role="tab" aria-controls="converstion" aria-selected="false">My Books</a>
+    <a class="<%= 'active' if params[:tab] == "converstions" %> tab-underlined" id="converstion-tab" data-toggle="tab" href="#converstions" role="tab" aria-controls="converstion" aria-selected="false">My Books</a>
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
@@ -107,7 +107,11 @@
             <div class="book_card">
               <div class="info_section">
                 <div class="d-flex kill-profile-margin">
-                  <%= link_to   %>
+                  <%= link_to book_path(book),
+            method: :delete,
+            data: { confirm: "Are you sure?" } do %>
+                    <i class="fas fa-trash" style="color:white"></i>
+                  <% end %>
                 </div>
                 <div class="book_header">
                   <%= image_tag book.cover_picture, class: 'locandina' %>
