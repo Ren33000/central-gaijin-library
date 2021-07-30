@@ -9,11 +9,11 @@
     <a class="<%= 'active' if params[:tab] == "requests" %> tab-underlined" id="profile-tab" data-toggle="tab" href="#requests" role="tab" aria-controls="profile" aria-selected="false">Requests</a>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="tab-underlined" id="converstion-tab" data-toggle="tab" href="#converstions" role="tab" aria-controls="converstion" aria-selected="false">My Books</a>
+    <a class="<%= 'active' if params[:tab] == "converstions" %> tab-underlined" id="converstion-tab" data-toggle="tab" href="#converstions" role="tab" aria-controls="converstion" aria-selected="false">My Books</a>
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade py-3 <%= 'show active' unless params[:tab] == "requests" %>" id="bookings" role="tabpanel" aria-labelledby="home-tab">
+  <div class="tab-pane fade py-3 <%= 'show active' if params[:tab] == "bookings" || params[:tab].nil? %>" id="bookings" role="tabpanel" aria-labelledby="home-tab">
     <% @bookings.each do |booking| %>
       <div class="container">
         <div class="row justify-content-center" id="title">
@@ -99,7 +99,7 @@
       </div>
     <% end %>
   </div>
-  <div class="tab-pane fade py-3" id="converstions" role="tabpanel" aria-labelledby="converstion-tab">
+  <div class="tab-pane fade py-3 <%= 'show active' if params[:tab] == "converstions" %> id="converstions" role="tabpanel" aria-labelledby="converstion-tab">
     <% @my_books.each do |book| %>
       <div class="container">
         <div class="row justify-content-center" id="title">
