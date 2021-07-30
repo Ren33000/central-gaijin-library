@@ -9,10 +9,15 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
   <body>
-    <div class="background" style="background-image: url(<%= asset_path('shelf-up.png') %>);">
+
+    <div class="background" style="background-image: url(<%=asset_path("shelf-up.png")%>)">
       <%= render 'shared/navbar2' %>
       <%= render 'shared/flashes' %>
-      <%= yield %>
+      <div class="background-body">
+        <%= yield %>
+        <%= render 'shared/footer' %>
+      </div>
+
     </div>
   </body>
 </html>
