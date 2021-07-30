@@ -15,8 +15,10 @@
 }
 
 body {
-    color: white;
+    color: rgba(255, 248, 248, 0.883);
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
     & a:hover {
         color: text-light;
     }

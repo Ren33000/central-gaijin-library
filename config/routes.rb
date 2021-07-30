@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :books, only: [:index, :show, :new, :create,] do
     resources :bookings, only: [:new, :create]
   end
-  resources :bookings, only: [:update]
+  resources :bookings, only: [:update, :destroy]
   get '/dashboards', to: 'dashboards#profile'
   # get '/books', to:'books#index'
   # get '/books/new', to:'books#new'
