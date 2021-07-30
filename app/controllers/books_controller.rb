@@ -45,6 +45,12 @@ class BooksController < ApplicationController
     end
   end
 
+  def destroy
+    authorize @book
+    @book.destroy
+    redirect_to dashboards_path(tab: "converstions")
+  end
+
   def show
     @booking = Booking.new
     authorize @booking

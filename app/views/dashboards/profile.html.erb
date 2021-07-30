@@ -9,7 +9,7 @@
     <a class="<%= 'active' if params[:tab] == "requests" %> tab-underlined" id="profile-tab" data-toggle="tab" href="#requests" role="tab" aria-controls="profile" aria-selected="false">Requests</a>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="tab-underlined" id="converstion-tab" data-toggle="tab" href="#converstions" role="tab" aria-controls="converstion" aria-selected="false">Conversations</a>
+    <a class="tab-underlined" id="converstion-tab" data-toggle="tab" href="#converstions" role="tab" aria-controls="converstion" aria-selected="false">My Books</a>
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
@@ -100,6 +100,32 @@
     <% end %>
   </div>
   <div class="tab-pane fade py-3" id="converstions" role="tabpanel" aria-labelledby="converstion-tab">
-    This is the content for the Conversations tab. Notice in the tab HTML there is a href="#converstations". This is pointing to the id of this div.
+    <% @my_books.each do |book| %>
+      <div class="container">
+        <div class="row justify-content-center" id="title">
+          <div class=".col">
+            <div class="book_card">
+              <div class="info_section">
+                <div class="d-flex kill-profile-margin">
+                  <%= link_to   %>
+                </div>
+                <div class="book_header">
+                  <%= image_tag book.cover_picture, class: 'locandina' %>
+                  <h3><%= book.title %></h3>
+                  <p class="category"><%= book.category %></p>
+                </div>
+                <div class="book_desc">
+                  <p class="owner">Owner: <em><%= book.user.name %></em></p>
+                  <p class="text"><%= book.description %></p>
+                </div>
+              </div>
+              <div class="sharp_edges">
+                <%= image_tag book.cover_picture, class: 'blur_back' %>
+              </div>
+              <!-- <br> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
-</div>
