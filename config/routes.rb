@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'books#index'
   get '/books/search', to: 'books#search', as: 'search'
   get '/books/category', to: 'books#category', as: 'category'
-  resources :books, only: [:index, :show, :new, :create,] do
+  resources :books, only: [:index, :show, :new, :create, :destroy] do
     resources :bookings, only: [:new, :create]
   end
   resources :bookings, only: [:update, :destroy]
@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   # get 'books/:id/bookings/new', to: 'bookings#new'
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
-    end
+  end
 end
