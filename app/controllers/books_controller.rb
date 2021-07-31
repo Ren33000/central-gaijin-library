@@ -63,7 +63,10 @@ class BooksController < ApplicationController
     @markers =
       [{
         lat: @user.latitude,
-        lng: @user.longitude
+        lng: @user.longitude,
+        info_window: render_to_string(partial: "info_window_show", locals: { book: @book })
+        # info_window: render_to_string(partial: "info_window", locals: { user: user })
+
       }]
   end
 
