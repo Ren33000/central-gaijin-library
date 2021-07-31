@@ -1,8 +1,8 @@
 <div class="container">
-  <div class="row justify-content-center mx-2" id="title">
+  <div class="text-center mx-2" id="title">
     <% if @query %>
       <h2>Results for <span style="color:#4F9AE6"><strong><%= @query %></strong></span></h2>
-      <h2>We found <span style="color:#4F9AE6"><strong><%= @books.count == 1 ? "a book" : "#{@books.count} books" %></strong></span> out of <%= Book.count %> from our database</h2>
+      <h4>We found <span style="color:#4F9AE6"><strong><%= @books.count == 1 ? "a book" : "#{@books.count} books" %></strong></span> out of <%= Book.count %> from our database</h4>
     <% else %>
       <h1>All <%= Book.count %> books</h1>
     <% end %>

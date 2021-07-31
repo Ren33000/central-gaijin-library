@@ -2,11 +2,18 @@
     background-image: image-url("shelf-down.png");
     border: none;
     color: rgba(255, 248, 248, 0.883);
-    font-family: Gowun Batang;
+    font-weight: bold;
     box-shadow: 0px -5px 3px 0px rgba(rgb(106, 103, 103), 0.2), 0px 5px 5px 0px rgba(rgb(106, 103, 103), 0.2);
     & a:link,
     a:visited {
         text-decoration: none;
         color: rgba(255, 248, 248, 0.883);
+    }
+}
+
+.shelf-title {
+    a,
+    h2 {
+        font-family: "Amiri", serif !important;
     }
 }
