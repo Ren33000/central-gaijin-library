@@ -3,11 +3,12 @@
 <br>
 <div class="container">
   <div class="book_card">
-     <%= link_to '+', new_book_booking_path(@book), class: "button button-primary-box add_book_btn" %>
+    <%= link_to '+', new_book_booking_path(@book), class: "button button-primary-box add_book_btn" %>
     <div class="info_section">
       <div class="book_header">
         <%= image_tag @book.cover_picture, class: 'locandina' %>
         <h3><%= @book.title %></h3>
+
         <p class="category"><%= link_to "#{@book.category}", category_path(category: "#{@book.category}")%></p>
       </div>
       <div class="book_desc">
@@ -21,15 +22,12 @@
     </div>
   </div>
 
-<div class="container">
-  <div class="row justify-content-center">
-    <div id="map"
-       style="width: 80%; height: 400px;"
-       data-markers="<%= @markers.to_json %>"
-       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
-  </div>
-</div>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Book Location
+        </button>
+        <%= render 'shared/map_modal' %>
+
+
 
 <div class="container" id="title">
   <div class="row justify-content-center">
