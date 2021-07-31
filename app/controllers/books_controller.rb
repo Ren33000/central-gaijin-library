@@ -12,10 +12,6 @@ class BooksController < ApplicationController
     @categories.each do |category|
       @books_categories[category] = policy_scope(Book).where(category: category)
     end
-    # @books_locations = {}
-    # @books.each do |book|
-    #   @books_locations[book] = policy_scope(Book).where(user: book.user)
-    # end
     @markers = @users.geocoded.map do |user|
       {
         lat: user.latitude,
