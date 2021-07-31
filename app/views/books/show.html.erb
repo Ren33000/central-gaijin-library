@@ -27,14 +27,12 @@
         </button>
         <%= render 'shared/map_modal' %>
 
-
-
 <div class="container" id="title">
-  <div class="row justify-content-center">
-    <div class="col">
-      <h3>Booking Request For</h3>
+  <div class="row justify-content-center mt-n4">
+    <div class="">
+      <h3>Request For</h3>
       <h4><strong><%= @book.title %></strong> </h4>
-      <div id='book-booking-dates' data-unavailable="<%= @book.unavailable_dates.to_json %>">
+      <div style="width: 100%", id='book-booking-dates' data-unavailable="<%= @book.unavailable_dates.to_json %>">
           <% if current_user.id != @book.user_id  %>
              <%= simple_form_for([@book, @booking]) do |f| %>
                  <%= f.input :start_date, as: :string, type: :text %>
@@ -52,17 +50,6 @@
       <%= link_to "Back", root_path, class:'button button-outline justify-content-center'%>
   </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 
 

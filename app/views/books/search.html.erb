@@ -17,7 +17,7 @@
             <div class="book_header">
               <%= image_tag book.cover_picture, class: 'locandina' %>
               <h3><%= book.title %></h3>
-              <p class="category"><%= book.category %></p>
+              <p class="category"><%= link_to "#{book.category}", category_path(category: "#{book.category}")%></p>
             </div>
             <div class="book_desc">
               <p class="owner">Owner: <em><%= book.user.name %></em></p>

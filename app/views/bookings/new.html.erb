@@ -1,8 +1,8 @@
 
 <div class="container" id="title">
   <div class="row justify-content-center">
-    <div class="col">
-      <h3>Booking Request For</h3>
+    <div class="container mx-5">
+      <h3>Request For</h3>
       <h4><strong><%= @book.title %></strong> </h4>
       <div id='book-booking-dates' data-unavailable="<%= @book.unavailable_dates.to_json %>">
           <% if current_user.id != @book.user_id  %>
