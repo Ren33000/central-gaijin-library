@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 90px 0px;
+    padding: 50px 0px;
     width: 100%;
 }
 
@@ -16,3 +16,14 @@
     padding: 30px;
     width: 50%;
 }
+
+// @media (min-width: 480px) {
+//     .form-container {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         padding: 90px 0px;
+//         width: 100%;
+//     }
+// }
