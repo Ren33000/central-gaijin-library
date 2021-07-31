@@ -29,6 +29,8 @@ my_user = User.create!(
   address: "Yokohama",
   email: "jdyoko@me.org",
   password: "livingyokolife",
+  latitude: 35.45857735586837,
+  longitude: 139.57858046544095
 )
 
 mylene = User.create!(
@@ -36,27 +38,35 @@ mylene = User.create!(
   address: "72-34, Horikawa-cho, Saiwai-ku, Kawasaki, Kanagawa 212-8585",
   email: "mylene@me.org",
   password: "mylenelife",
+  latitude: 35.532300169267685,
+  longitude: 139.69429502211568
 )
 
 troy = User.create!(
   name: "Troy",
   address: "4-23-5 Koenjiminami, Suginami, Tokyo, 166-0003",
   email: "troy@me.org",
-  password: "troylife"
+  password: "troylife",
+  latitude: 35.703905887490336,
+  longitude: 139.64978322766413
 )
 
 spencer = User.create!(
   name: "Spencer",
   address: "3 Chome-11-1 Tsunashimanishi, Kohoku Ward, Yokohama, Kanagawa 223-0053",
   email: "spencer@me.org",
-  password: "spencerlife"
+  password: "spencerlife",
+  latitude: 35.537588780100535,
+  longitude: 139.62804592766167
 )
 
 dean = User.create!(
   name: "Dean",
   address: "1-1 Yoyogikamizonocho, Shibuya City, Tokyo 151-8557",
   email: "dean@me.org",
-  password: "deanlife"
+  password: "deanlife",
+  latitude: 35.67338098650392,
+  longitude: 139.70251045649883
 )
 
 Book.create!(

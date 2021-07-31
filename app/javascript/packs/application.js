@@ -39,3 +39,12 @@ document.addEventListener('turbolinks:load', () => {
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
 });
+
+
+
+import { initMapbox } from '../plugins/init_mapbox';
+
+document.addEventListener('turbolinks:load', () => {
+  console.log("Goodbye")
+  initMapbox();
+});

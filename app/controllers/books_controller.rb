@@ -5,12 +5,19 @@ class BooksController < ApplicationController
   before_action :find_book, only: [:show, :destroy]
 
   def index
-
+    @users = User.all
     @categories = ["Kids", "Romance", "Sci-Fi and Fantasy", "Non-fiction", "Classics", "Comics", "Mystery and Crime"]
     @books = policy_scope(Book).order(created_at: :desc)
     @books_categories = {}
     @categories.each do |category|
       @books_categories[category] = policy_scope(Book).where(category: category)
+    end
+    @markers = @users.geocoded.map do |user|
+      {
+        lat: user.latitude,
+        lng: user.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { user: user })
+      }
     end
   end
 
@@ -58,6 +65,15 @@ class BooksController < ApplicationController
   def show
     @booking = Booking.new
     authorize @booking
+    @user = @book.user
+    @markers =
+      [{
+        lat: @user.latitude,
+        lng: @user.longitude,
+        info_window: render_to_string(partial: "info_window_show", locals: { book: @book })
+        # info_window: render_to_string(partial: "info_window", locals: { user: user })
+
+      }]
   end
 
   private

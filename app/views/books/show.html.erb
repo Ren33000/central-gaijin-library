@@ -20,6 +20,17 @@
       <%= image_tag @book.cover_picture, class: 'blur_back' %>
     </div>
   </div>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div id="map"
+       style="width: 80%; height: 400px;"
+       data-markers="<%= @markers.to_json %>"
+       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
+</div>
+
 <div class="container" id="title">
   <div class="row justify-content-center">
     <div class="col">
@@ -55,3 +66,5 @@
 <br>
 <br>
 <br>
+
+
