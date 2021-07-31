@@ -16,7 +16,7 @@ class BookingsController < ApplicationController
       @booking.pending!
       redirect_to dashboards_path
     else
-      render :new
+      render "books/show"
     end
   end
 

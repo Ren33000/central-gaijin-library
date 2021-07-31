@@ -2,7 +2,7 @@ require 'open-uri'
 
 class BooksController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
-  before_action :find_book, only: :show
+  before_action :find_book, only: [:show, :destroy]
 
   def index
     @users = User.all
@@ -52,6 +52,16 @@ class BooksController < ApplicationController
     end
   end
 
+  def destroy
+    authorize @book
+    if @book.bookings.present?
+      flash[:notice] = "CANNOT DELETE due to current bookings"
+    else
+      @book.destroy
+    end
+    redirect_to dashboards_path(tab: "converstions")
+  end
+
   def show
     @booking = Booking.new
     authorize @booking
@@ -85,7 +95,6 @@ class BooksController < ApplicationController
 
   def find_book
     @book = Book.find(params[:id])
-    authorize @book
   end
 
   # def book_params
